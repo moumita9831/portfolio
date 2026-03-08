@@ -58,7 +58,7 @@ body
     max-width: 600px;
 }
 .home-content h3 {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 700;
 }
 .home-content h1 {
@@ -67,7 +67,7 @@ body
     margin: -3px 0;
 }
 .home-content p {
-    font-size: 20px;
+    font-size: 17px;
 }
 .home-sci a {
     display: inline-flex;
