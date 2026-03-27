@@ -231,11 +231,12 @@ body {
 
 .about {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 50px;
-    padding: 100px 10%;
+    padding: 80px 10%;
 }
+
 
 .about-img img {
     width: 280px;
@@ -353,9 +354,140 @@ body {
 }
 
 .sub {
-    margin-top: 100px;
+    margin-top: 40px;
     text-shadow: 0 0 3px #0ef;
-    margin-left: 150px;
+    text-align: center;
     font-size: 50px;
 }
 
+
+.container1 {
+    width: 600px;
+    
+    padding: 50px 70px;
+    margin: 0 auto;
+    
+}
+
+
+
+.heading1 {
+    text-align: center;
+    margin-bottom: 60px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3px;
+}
+
+#Skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bar{
+    font-size: 23px;
+}
+
+.Technical-bars .bar {
+    margin: 25px 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.Technical-bars .bar img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 6px;
+    filter: drop-shadow(0 0 5px #fff);
+    
+}
+
+.Technical-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.Technical-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.Technical-bars .bar .info {
+    margin-top: 5px;
+}
+
+.Technical-bars .bar .info span {
+    font-size: 17px;
+    
+    
+    color: #fff;
+    
+    margin-bottom: 5px;
+}
+
+.Technical-bars .bar .progress-line {
+    position: relative;
+   
+    width: 100%;
+    height: 5px;
+    background-color: #0ef;
+    margin-top: 8px;
+    
+}
+
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.Technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0,5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.skill-heading {
+    position: relative;
+    
+    
+}
+
+
+.skill-heading::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #0ef;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.skill-heading.active::after {
+    width: 230px;
+}
+
+.left-slide {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: 0.3s;
+}
+
+.right-slide {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: 0.8s;
+}
+
+.left-slide.show,
+.right-slide.show {
+    opacity: 1;
+    transform: translateX(0);
+}
